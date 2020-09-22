@@ -48,9 +48,9 @@ nav:
 
     - Herramientas: 
         - Contenedores: 
-            - Docker: 'Herramientas/docker.md' 
-            - Kubernetes: 'Herramientas/kubernetes.md' 
-            - Snaps: 'Herramientas/snap.md' 
+            - Docker: 'Herramientas/Contenedores/docker.md' 
+            - Kubernetes: 'Herramientas/Contenedores/kubernetes.md' 
+            - Snaps: 'Herramientas/Contenedores/snap.md' 
         - Editores:
             - Vim: 'Herramientas/Editores/vim.md'
             - Visual Studio Code: 'Herramientas/Editores/vscode.md'
