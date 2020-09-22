@@ -1,17 +1,28 @@
-# Welcome to MkDocs
+# Oh DAW!  
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## ¿Qué es esto?
 
-## Commands
+Notas, consejos y apuntes sobre desarrollo de aplicaciones web. En progreso.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Secciones
 
-## Project layout
+El contenido está dividido en cuatro secciones principales, más un apartado de [preguntas frecuentes](FAQ/faq.md) donde recojo las soluciones a dudas o dolores de cabeza habituales:
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- **Herramientas**: 
+- **Lenguajes**:
+- **Sistemas**
+- **Conceptos**
+
+---
+
+# Sobre mí
+
+Hace un año largo que empecé a estudiar de forma oficial _Desarrollo de Aplicaciones Web_, cuyas siglas suenan tanto a Homer Simpson pillándose el dedo con una pinza (DAW). No siempre es fácil cumplir con la obligación de mantenerse actualizado, más cuando se nos exige ser navajas suizas: diseñar temas CSS para webs, que bases de datos, montar servidores, mantenerlos y por supuesto, atender al cliente insatisfecho, perdido o simplemente cabreado porque la impresora está "durmiendo" y se niega a cumplir su cometido...**Fullstack Developer** lo llaman.
+
+"No lo sé, espera que mire en internet"
+
+A Roma igual no llevan, pero si tienes una pregunta, caminos no te van a faltar, ni respuestas; soluciones es otra cosa.
+
+Solía escribir mis notas en [Tiddlywiki](https://www.tiddlywiki.com), pero llevaba tiempo buscando algo más fácil de **editar** y especialmente de **compartir**. En esto me topé con [MkDocs](https://www.mkdocs.org/), que cumplía con mis condiciones: mantener una documentación en archivos markdown, fácil de editar, ver, compartir y controlar (mediante _git_).
+
+
