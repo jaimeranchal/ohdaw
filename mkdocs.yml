@@ -37,8 +37,15 @@ nav:
                 - 'Sentencias switch': 'Lenguajes/javascript/switch.md'
                 - Funciones: 'Lenguajes/javascript/funciones.md'
     - Sistemas:
-        - Linux: 'Sistemas/linux/intro.md'
-        - Windows: 'Sistemas/windows/intro.md'
+        - Linux: 
+            - Sistema: 'Sistemas/linux/sysadmin.md'
+            - Usuarios: 'Sistemas/linux/useradmin.md'
+            - Redes: 'Sistemas/linux/netadmin.md'
+        - Windows: 
+            - Sistema: 'Sistemas/windows/sysadmin.md'
+            - Usuarios: 'Sistemas/windows/useradmin.md'
+            - Redes: 'Sistemas/windows/netadmin.md'
+
     - Herramientas: 
         - Contenedores: 
             - Docker: 'Herramientas/docker.md' 
