@@ -57,6 +57,7 @@ nav:
             - Sublime Text: 'Herramientas/Editores/sublime-text.md'
         - Frameworks:
             - Laravel: 'Herramientas/Frameworks/laravel.md'
+            - BootStrap: 'Herramientas/Frameworks/bootstrap.md'
         - IDEs:
             - Apache Netbeans: 'Herramientas/IDE/netbeans.md'
             - Eclipse: 'Herramientas/IDE/eclipse.md'
@@ -64,6 +65,8 @@ nav:
             - Maven: 'Herramientas/Otros/maven.md'
     - FAQ: 'FAQ/faq.md'
 theme:
+    features:
+        - tabs
     name: material
     language: es
     font:
@@ -72,12 +75,17 @@ theme:
     icon:
         logo: material/book-open-blank-variant
     palette:
-        scheme: slate
-        primary: amber
-        accent: deep orange
+        scheme: default
+        primary: deep purple
+        accent: indigo
 markdown_extensions:
+    - admonition
+    - def_list
+    - pymdownx.details
     - pymdownx.highlight
     - pymdownx.superfences
     - pymdownx.inlinehilite
     - pymdownx.keys
-    - pymdownx.snippets
+    - pymdownx.snippets:
+        base_path: '/home/jaime/Proyectos/ohdaw/docs/'
+        check_paths: true
