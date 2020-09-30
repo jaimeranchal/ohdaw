@@ -980,11 +980,290 @@ echo $num;
 ```
 
 ### Imprimir: echo / print
+
+Las sentencias `echo` y `print` hacen lo mismo: **imprimir** contenido en la pantalla.
+
+La diferencia es que:
+
+- `echo`:
+    - no devuelve nada.
+    - puede recibir **múltiples parámetros**
+    - es un poquito más rápido
+- `print`:
+    - devuelve `1`, por lo que se puede usar en expresiones.
+    - sólo puede recibir **un argumento**
+
+```php
+<?php
+echo "<h2>PHP is Fun!</h2>"; // EVITAR meter código HTML como parámetro (claridad)
+echo "Hello world!<br>";
+echo "I'm about to learn PHP!<br>";
+echo "This ", "string ", "was ", "made ", "with multiple parameters.";
+?>
+
+<?php
+$x = 5;
+$y = 6;
+print "<h2>PHP is Fun!</h2>";
+print "Hello world!<br>";
+print "I'm about to learn PHP!";
+print $x + $y;
+?>
+```
+
 ### Manejo de Cadenas
-### Manejo de Números
+
+**Longitud de una cadena**
+:    con `strlen()`
+
+    ```php
+    <?php
+    echo strlen("Hola mundo!"); // resultado 12
+    ?>
+    ```
+
+**Contar palabras**
+:   Con `str_word_count()`:
+    
+    ```php
+    <?php
+    echo str_word_count("Hola mundo!"); // resultado 2
+    ?>
+    ```
+
+**Invertir cadena**
+:   Con `strrev()`:
+
+    ```php
+    <?php
+    echo strrev("Hola mundo!"); // resultado !odnum aloH
+    ?>
+    ```
+
+**Buscar dentro de una cadena**
+:   Con `strpos()`; devuelve la posición del carácter de la primera coincidencia, o _false_ si no lo encuentra.
+
+    ```php
+    <?php
+    echo strpos("Hola mundo!", "mundo"); // resultado 6
+    ?>
+    ```
+
+**Sustituir parte de una cadena**
+:   Con `str_replace()`:
+
+    ```php
+    <?php
+    echo str_replace("mundo", "Dolly", "Hola mundo!"); // Devuelve Hola Dolly!
+    ?>
+    ```
+
+### Manejo de Números (matemáticas)
+
+Algunas de las funciones más comunes para realizar operaciones matemáticas son:
+
+- `pi()`: devuelve el valor de PI
+- `min()` y `max()`: valor mínimo y máximo en una lista de números
+- `abs()`: valor absoluto positivo de un número
+- `sqrt()`: raíz cuadrada
+- `round()`: redondea un decimal al entero más cercano.
+- `rand(min, max)`: genera un número **aleatorio** entre los parámetros (inclusivol).
+
+```php
+<?php
+echo(pi()); // 3.1415926535898
+
+echo(min(0, 150, 30, 20, -8, -200)); // devuelve -200
+echo(max(0, 150, 30, 20, -8, -200)); // devuelve 150
+
+echo(abs(-6.7)); // devuelve 6.7
+
+echo(sqrt(64)); // devuelve 8
+
+echo(round(0.60)); // 1
+echo(round(0.49)); // 0
+
+echo(rand());
+echo(rand(10, 100));
+?>
+```
+
 ### Manejo de Arrays
 
-Con la función `array()`:
-### Matemáticas
+Esta es una lista de las funciones más útiles:
+
+`array()`
+:   Crea un array con los elementos pasados por parámetro.
+
+`count()`
+:   Cuenta el número de elementos de un array
+    
+    ```php
+    <?php
+    $cars = array("Volvo", "BMW", "Toyota");
+    echo count($cars);
+    ?>
+    ```
+
+**Bucle a través de los elementos de un array**
+:   Usando un `for`:
+
+    ```php
+    <?php
+    $cars = array("Volvo", "BMW", "Toyota");
+    $arrlength = count($cars);
+
+    for($x = 0; $x < $arrlength; $x++) {
+      echo $cars[$x];
+      echo "<br>";
+    }
+    ?>
+    ```
+
+    ```php
+    // Array asociativo
+    <?php
+    $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+
+    foreach($age as $x => $x_value) {
+      echo "Key=" . $x . ", Value=" . $x_value;
+      echo "<br>";
+    }
+    ?>
+    ```
+
+#### Ordenar arrays
+
+**Ascendente** y **descendente** 
+:   `sort()` y `rsort()`
+
+    ```php
+    <?php
+    $cars = array("Volvo", "BMW", "Toyota");
+    sort($cars);
+    ?>
+
+    <!-- con números -->
+    <?php
+    $numbers = array(4, 6, 2, 22, 11);
+    rsort($numbers);
+    ?>
+    ```
+
+**Según un valor**
+:   En arrays _clave-valor_, con `asort()` y `arsort()` (descendente):
+
+    ```php
+    <?php
+    $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+    asort($age);
+    ?>
+    ```
+ 
+**Según la clave**
+:   En arrays _clave-valor_, con `ksort()` y `krsort()` (descendente):
+
+    ```php
+    <?php
+    $age = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+    ksort($age);
+    ?>
+    ```
 
 ## Expresiones regulares
+
+En PHP, las expresiones regulares son _cadenas_ compuestas de:
+
+- delimitadores
+- un patrón
+- modificadores opcionales
+
+```php
+<?php
+$exp = "/w3schools/i";
+// "/"         = delimitador
+// "w3schools" = patrón
+// "i"         = modificador; búsqueda ignorando may. y min.
+?>
+```
+
+### Funciones para Expr. Regulares
+
+- `preg_match()`     : devuelve `1` si se encuentra el patrón; `0` si no.
+- `preg_match_all()` : devuelve el número de coincidencias del patrón (incluido 0).
+- `preg_replace()`   : devuelve una nueva cadena donde los patrones encontrados han sido reemplazados.
+
+```php
+<?php
+$str = "Visit W3Schools";
+$pattern = "/w3schools/i";
+echo preg_match($pattern, $str); // Outputs 1
+
+// cuenta las ocurrencias de "ain" sin tener en cuenta la capitalización
+$str = "The rain in SPAIN falls mainly on the plains.";
+$pattern = "/ain/i";
+echo preg_match_all($pattern, $str); // Outputs 4
+
+// reemplaza "Microsoft" por "W3Schools"
+$str = "Visit Microsoft!";
+$pattern = "/microsoft/i";
+echo preg_replace($pattern, "W3Schools", $str); // Outputs "Visit W3Schools!"
+?>
+
+```
+
+### Modificadores
+
+| Modificador | Descripción                    |
+|-------------|--------------------------------|
+| i           | Ignora mayúsculas y minúsculas |
+| m           | Búsqueda multilínea            |
+| u           | Soporte para UTF-8             |
+
+### Patrones
+
+| Expresión | Descripción                                         |
+|-----------|-----------------------------------------------------|
+| `[abc]`   | Encuentra uno de los caracteres incluido            |
+| `[^abc]`  | Encuentra todo **excepto** los caracteres incluidos |
+| `[0-9]`   | Rango de posibilidades                              |
+
+### Metacaracteres
+
+| Metacarácter | Descripción                                                              |
+|--------------|--------------------------------------------------------------------------|
+| `            | `                                                                        | Alternativa: `gato | perro | pez` |
+| `.`          | Encuentra solo **una instancia** de cualquier carácter                   |
+| `^`          | Busca al principio de la cadena: `^Hola`                                 |
+| `$`          | Busca al final de la cadena: `mundo$`                                    |
+| `\d`         | Número                                                                   |
+| `\s`         | Espacio en blanco                                                        |
+| `\b`         | Busca al comienzo de una palabra (`\bPALABRA`), o al final (`PALABRA\b`) |
+| `\uxxxx`     | Busca signo Unicode por su código hexadecimal                            |
+
+### Cuantificadores
+
+| Cuantificador | Descripción                         |
+|---------------|-------------------------------------|
+| `n+`          | Al menos una _n_                    |
+| `n*`          | Cero o más de una ocurrencia de _n_ |
+| `n?`          | Cero o Una ocurrencia de _n_        |
+| `n{x}`        | Secuencia de x _n_                  |
+| `n{x,y}`      | Secuencia de entre x e y _n_        |
+| `n{x,}`       | Secuencia de **al menos** x _n_     |
+
+### Grupos
+
+Se pueden usar paréntesis para crear **grupos** dentro de un patrón:
+
+- para aplicar cuantificadores a un conjunto de elementos.
+- para seleccionar partes del patrón como coincidencia.
+
+```php
+<?php
+$str = "Apples and bananas.";
+$pattern = "/ba(na){2}/i";
+echo preg_match($pattern, $str); // Outputs 1
+?>
+```
+
