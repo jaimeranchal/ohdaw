@@ -79,6 +79,8 @@ theme:
         primary: deep purple
         accent: indigo
 markdown_extensions:
+    - toc:
+        permalink: True
     - admonition
     - def_list
     - pymdownx.details

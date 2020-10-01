@@ -216,7 +216,7 @@ myTest();
     - `$_COOKIE`
     - `$_SESSION`
 
-### Superglobales: `$GLOBALS` 
+### Superglobales
 
 Almacena todas las variables globales en un _array_.
 
@@ -271,13 +271,7 @@ echo $_SERVER['SCRIPT_NAME'];
 | `$_SERVER['HTTP_HOST']`           | Returns the Host header from the current request                                                                   |
 | `$_SERVER['HTTP_REFERER']`        | URL completa de la página actual (no todos los _user-agents_ lo soportan; NO USAR)                                 |
 | `$_SERVER['HTTPS']`               | Si se usa protocolo seguro o no                                                                                    |
-| `$_SERVER['REMOTE_ADDR']`         | Dirección IP desde donde accede el usuario                                                                         |
-| `$_SERVER['REMOTE_HOST']`         | Host desde el que accede el usuario                                                                                |
-| `$_SERVER['REMOTE_PORT']`         | Puerto en la máquina del usuario por el que se comunica con el servidor                                            |
-| `$_SERVER['SCRIPT_FILENAME']`     | Ruta absoluta del script ejecutándose                                                                              |
-| `$_SERVER['SERVER_ADMIN']`        | Valor de la directiva `SERVER_ADMIN` en la config. del servidor (o del host virtual) (alguien@w3schools.com, p.ej) |
-| `$_SERVER['SERVER_PORT']`         | Puerto en la máquina del servidor usado para que el servidor se comunique (80 p.e)                                 |
-| `$_SERVER['SERVER_SIGNATURE']`    | Versión del servidor y nombre del host virtual que se añaden a las páginas generadas                               |
+| `$_SERVER['REMOTE_ADDR']`         | Dirección IP desde donde accede el usuario                                                                         | | `$_SERVER['REMOTE_HOST']`         | Host desde el que accede el usuario                                                                                | | `$_SERVER['REMOTE_PORT']`         | Puerto en la máquina del usuario por el que se comunica con el servidor                                            | | `$_SERVER['SCRIPT_FILENAME']`     | Ruta absoluta del script ejecutándose                                                                              | | `$_SERVER['SERVER_ADMIN']`        | Valor de la directiva `SERVER_ADMIN` en la config. del servidor (o del host virtual) (alguien@w3schools.com, p.ej) | | `$_SERVER['SERVER_PORT']`         | Puerto en la máquina del servidor usado para que el servidor se comunique (80 p.e)                                 | | `$_SERVER['SERVER_SIGNATURE']`    | Versión del servidor y nombre del host virtual que se añaden a las páginas generadas                               |
 | `$_SERVER['PATH_TRANSLATED']`     | Ruta basada en el sistema de archivos del script actual                                                            |
 | `$_SERVER['SCRIPT_NAME']`         | Ruta del script actual                                                                                             |
 | `$_SERVER['SCRIPT_URI']`          | URI de la página actual                                                                                            |
