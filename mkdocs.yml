@@ -24,18 +24,8 @@ nav:
                 - 'Objetos y clases': 'Lenguajes/java/04.objetos-clases.md'
                 - Consejos: 'Lenguajes/java/consejos.md'
         - JavaScript: 
-            - 'Lo básico':
-                - Introducción: 'Lenguajes/javascript/intro.md'
-                - Estructura: 'Lenguajes/javascript/estructura.md'
-                - Variables: 'Lenguajes/javascript/variables.md'
-                - 'Tipos de datos': 'Lenguajes/javascript/tipos.md'
-                - 'Operadores básicos': 'Lenguajes/javascript/operadores.md'
-                - Comparaciones: 'Lenguajes/javascript/comparar.md'
-                - 'Unión de nulos': 'Lenguajes/javascript/operador-nullish-coalescing.md'
-                - 'Operadores lógicos': 'Lenguajes/javascript/logic.md'
-                - Condicionales: 'Lenguajes/javascript/condicionales.md'
-                - 'Sentencias switch': 'Lenguajes/javascript/switch.md'
-                - Funciones: 'Lenguajes/javascript/funciones.md'
+            - Introducción: 'Lenguajes/javascript/intro.md'
+            - Fundamentos: 'Lenguajes/javascript/fundamentos.md'
     - Sistemas:
         - Linux: 
             - Sistema: 'Sistemas/linux/sysadmin.md'

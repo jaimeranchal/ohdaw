@@ -1,0 +1,3 @@
+# Sintaxis básica
+
+## Modo estricto
