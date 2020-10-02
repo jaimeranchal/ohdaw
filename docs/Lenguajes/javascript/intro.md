@@ -21,7 +21,9 @@ Los scripts se escriben y ejecutan como archivos de texto plano; no necesitan pr
 !!! info "¿Por qué se le llama JavaScript?"
     Su nombre original era _LiveScript_, pero debido a la popularidad de java en aquel momento se consideró mejor posicionarlo como un hermano menor.
 
-    JavaScript es un lenguaje independiente con su propia especificación, [ESCMAScript](http://es6-features.org/) y no tiene ninguna relación con Java
+    JavaScript es un lenguaje independiente con su propia especificación, [ECMAScript](http://es6-features.org/) y no tiene ninguna relación con Java
+
+    La versión del estándar más importante es ECMAScript 6, lanzada en junio de 2015.
 
 JavaScript se puede ejecutar en el **navegador** y también en un **servidor**, o cualquier programa que tenga un _motor JavaScript_. El navegador incorpora uno de fábrica, a veces llamado JavaScript virtual machine.
 
@@ -83,7 +85,5 @@ Ejemplos:
 - [TypeScript](https://www.typescriptlang.org): se centra en añadir **declaración estricta de tipos de datos** para simplificar el desarrollo y dar soporte a sistemas complejos. Desarrollado por Microsoft.
 - [Flow](https://flow.org): hace lo mismo que TypeScript, pero desarrollado por Facebook.
 - [Dart](https://www.dartlang.org): desarrollado por Google, es un lenguaje independiente con su propio motor que corre en entornos diferentes al navegador (aplicaciones móviles, p.ej.); también se puede transpilar a JS.
-
-## Algunos ejemplos
 
 

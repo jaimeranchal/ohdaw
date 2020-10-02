@@ -25,7 +25,16 @@ nav:
                 - Consejos: 'Lenguajes/java/consejos.md'
         - JavaScript: 
             - Introducción: 'Lenguajes/javascript/intro.md'
-            - Fundamentos: 'Lenguajes/javascript/fundamentos.md'
+            - Fundamentos: 
+                - 'Hola mundo': 'Lenguajes/javascript/fundamentos.md'
+                - Sintaxis: 'Lenguajes/javascript/sintaxis.md'
+                - Variables: 'Lenguajes/javascript/variables.md'
+                - 'Tipos de datos': 'Lenguajes/javascript/tipos.md'
+                - Operadores: 'Lenguajes/javascript/operadores.md'
+                - 'Comparar variables': 'Lenguajes/javascript/comparar.md'
+                - Condicionales: 'Lenguajes/javascript/condicionales.md'
+                - Switch: 'Lenguajes/javascript/switch.md'
+                - Funciones: 'Lenguajes/javascript/funciones.md'
     - Sistemas:
         - Linux: 
             - Sistema: 'Sistemas/linux/sysadmin.md'
@@ -75,6 +84,7 @@ markdown_extensions:
     - def_list
     - pymdownx.details
     - pymdownx.highlight
+    - pymdownx.tabbed
     - pymdownx.superfences
     - pymdownx.inlinehilite
     - pymdownx.keys

@@ -8,10 +8,11 @@ Notas, consejos y apuntes sobre desarrollo de aplicaciones web. En progreso.
 
 El contenido está dividido en cuatro secciones principales, más un apartado de [preguntas frecuentes](FAQ/faq.md) donde recojo las soluciones a dudas o dolores de cabeza habituales:
 
-- **Herramientas**: 
-- **Lenguajes**:
-- **Sistemas**
-- **Conceptos**
+!!! summary "Índice"
+    - Herramientas 
+    - Lenguajes
+    - Sistemas
+    - Conceptos
 
 ---
 
