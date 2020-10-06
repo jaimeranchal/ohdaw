@@ -35,6 +35,10 @@ nav:
                 - Condicionales: 'Lenguajes/javascript/condicionales.md'
                 - Switch: 'Lenguajes/javascript/switch.md'
                 - Funciones: 'Lenguajes/javascript/funciones.md'
+        - Php:
+            - Introducción: 'Lenguajes/php/intro.md'
+            - Tutorial básico: 'Lenguajes/php/tutorial.md'
+            - Formularios: 'Lenguajes/php/formularios.md'
     - Sistemas:
         - Linux: 
             - Sistema: 'Sistemas/linux/sysadmin.md'
