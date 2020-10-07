@@ -69,11 +69,11 @@ nav:
     - FAQ: 'FAQ/faq.md'
 theme:
     features:
-        - tabs
+        - navigation.tabs
     name: material
     language: es
     font:
-        text: Noto Sans
+        text: Rubik
         code: Fira Code
     icon:
         logo: material/book-open-blank-variant
