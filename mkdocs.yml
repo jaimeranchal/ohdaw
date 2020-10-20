@@ -8,7 +8,7 @@ theme:
     language: es
     name: material
     features:
-        - tabs
+        - navigation.tabs # 'tabs' en versiones más recientes
     palette:
         scheme: default
         primary: deep purple
