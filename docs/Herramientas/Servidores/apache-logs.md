@@ -129,6 +129,9 @@ CustomLog "|/usr/bin/rotatelogs -n 10 /var/log/apache2/access.log 5M" common
 
 ### Con _logrotate_
 
+!!! info "Tutorial"
+    Hay una guía muy buena en [Tecmint](https://www.tecmint.com/install-logrotate-to-manage-log-rotation-in-linux/)
+
 El programa _logrotate_ rota, comprime y envía archivos de registro a diario, semanalmente, mensualmente o según el tamaño del archivo. Suele emplearse en una tarea diaria del _cron_. 
 
 En sistemas Debian usa los siguientes archivos de configuración:

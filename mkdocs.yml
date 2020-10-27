@@ -8,7 +8,7 @@ theme:
     language: es
     name: material
     features:
-        - navigation.tabs # 'tabs' en versiones más recientes
+        - tabs # 'tabs' en versiones más recientes
     palette:
         scheme: default
         primary: deep purple
@@ -83,6 +83,7 @@ nav:
             - Tutorial básico: 'Lenguajes/php/tutorial.md'
             - Formularios: 'Lenguajes/php/formularios.md'
             - 'Validación de datos': 'Lenguajes/php/validar.md'
+            - 'Manejo de Objetos': 'Lenguajes/php/objetos.md'
             - 'Bases de datos': 'Lenguajes/php/bbdd.md'
 #    - Sistemas:
 #        - Linux: 
