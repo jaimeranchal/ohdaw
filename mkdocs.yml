@@ -85,6 +85,11 @@ nav:
             - 'Validación de datos': 'Lenguajes/php/validar.md'
             - 'Manejo de Objetos': 'Lenguajes/php/objetos.md'
             - 'Bases de datos': 'Lenguajes/php/bbdd.md'
+        - SQL: 
+            - Primeros pasos: 'Lenguajes/sql/intro.md'
+            - Definir tablas: 'Lenguajes/sql/DDL.md'
+            - Modificar datos: 'Lenguajes/sql/DML.md'
+            - Buscar datos: 'Lenguajes/sql/DQL.md'
 #    - Sistemas:
 #        - Linux: 
 #            - Sistema: 'Sistemas/linux/sysadmin.md'
