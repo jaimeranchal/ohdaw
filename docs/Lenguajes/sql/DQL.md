@@ -273,3 +273,69 @@ Para agrupar filas con los mismos valores usamos la cláusula `GROUP BY`. Esta s
     ```
 
 ## Combinar registros de varias tablas: JOINS
+Una cláusula `JOIN` permite combinar filas de dos o más tablas a partir de una columna en común (una **clave foránea**).
+
+Hay cuatro tipos de `JOINS`:
+
+1. **(INNER) JOIN**: sólo valores comunes a ambas tablas.
+2. **LEFT (OUTER) JOIN**: todos los registros de la tabla izquierda, más los que coincidan con la tabla derecha
+3. **RIGHT (OUTER) JOIN**: todos los registros de la tabla derecha, más los que coincidan con la tabla izquierda
+4. **FULL (OUTER) JOIN**: todos los registros de ambas, _cuando exista una coincidencia entre las dos_.
+
+![joins](./dql-joins.jpg)
+
+Un quinto uso, también habitual es un `JOIN` con la **misma tabla** (`SELF JOIN`). Se usa para filtrar datos según la relación que se de entre columnas de la misma tabla.
+
+### Sintaxis y ejemplos
+
+=== "Inner Join"
+    ```mysql
+    SELECT column_name(s)
+    FROM table1
+    INNER JOIN table2
+    ON table1.column_name = table2.column_name;
+
+    -- Uniendo tres tablas
+    SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperName
+    FROM ((Orders
+    INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID)
+    INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID);
+    ```
+
+=== "Left/Right (Outer) Join"
+    ```mysql
+    SELECT column_name(s)
+    FROM table1
+    LEFT|RIGHT JOIN table2
+    ON table1.column_name = table2.column_name;
+    ```
+
+    !!! note "Nulos"
+        Un LEFT o RIGHT JOIN devuelve todos los registros de la tabla izquierda, _incluso_ si no hay coincidencia en la tabla derecha.
+
+=== "Full (Outer) Join"
+    ```mysql
+    SELECT column_name(s)
+    FROM table1
+    FULL OUTER JOIN table2
+    ON table1.column_name = table2.column_name
+    WHERE condition;
+    ```
+
+    !!! note "Sin filtro"
+        Un FULL JOIN devuelve todos los registros, cumplan la condición o no.
+
+=== "Self Join"
+    ```mysql
+    SELECT column_name(s)
+    FROM table1 T1, table1 T2
+    WHERE condition;
+
+    -- Devuelve los clientes de la misma ciudad
+    SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City
+    FROM Customers A, Customers B
+    WHERE A.CustomerID <> B.CustomerID
+    AND A.City = B.City
+    ORDER BY A.City;
+    ```
+    
