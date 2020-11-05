@@ -536,5 +536,4 @@ La idea es pasar una función y esperar a que le "devuelvan la llamada" en otro 
         welcome(); // ok now
         ```
 
-## Funciones sin nombre
-## _Arrow functions_
+## Funciones Flecha

@@ -18,3 +18,11 @@ Excepto en el último punto es muy similar a cualquier otro lenguaje POO, como j
 !!! info "Jerarquía de Objetos en JavaScript"
     ![jerarquía](./obj.hierarchy.png)
 
+Se puede crear un objeto vacío de **dos maneras**:
+
+```javascript
+let user = new Object(); // sintaxis de "Constructor"
+let user = {};           // sintaxis de "Objeto Literal"
+```
+## Objetos literales
+
