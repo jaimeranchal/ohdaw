@@ -85,6 +85,7 @@ nav:
             - 'Validación de datos': 'Lenguajes/php/validar.md'
             - 'Manejo de Objetos': 'Lenguajes/php/objetos.md'
             - 'Bases de datos': 'Lenguajes/php/bbdd.md'
+            - Sesiones: 'Lenguajes/php/sesiones.md'
         - SQL: 
             - Primeros pasos: 'Lenguajes/sql/intro.md'
             - Definir tablas: 'Lenguajes/sql/DDL.md'
