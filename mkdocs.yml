@@ -74,10 +74,13 @@ nav:
                 - Condicionales: 'Lenguajes/javascript/condicionales.md'
                 - Switch: 'Lenguajes/javascript/switch.md'
                 - Funciones: 'Lenguajes/javascript/funciones.md'
+            - 'Tipos de Datos':
+                - Arrays: 'Lenguajes/javascript/dt.arrays.md'
             - 'Objetos y Clases':
                 - Introducción: 'Lenguajes/javascript/obj.intro.md'
                 - 'Objetos de primer nivel': 'Lenguajes/javascript/obj.primer_nivel.md'
                 - 'Objetos Nativos': 'Lenguajes/javascript/obj.nativos.md'
+                - Métodos: 'Lenguajes/javascript/obj.metodos.md'
                 - Clases: 'Lenguajes/javascript/clases.md'
         - Php:
             - Introducción: 'Lenguajes/php/intro.md'

@@ -148,3 +148,79 @@ for (let key in usuario) {
 }
 ```
 
+## Referenciar y copiar objetos
+Cuando asignamos una variable a un objeto, lo que hacemos es crear una _referencia_ al mismo. Podemos crear tantas como queramos, pero todas apuntarán al **mismo objeto**; modifica una propiedad usando alguna de esas variables y quedará modificada "para todas las demás".
+
+```javascript
+let usuario = { nombre: "Juan" };
+let admin = usuario;
+
+admin.nombre = "Pablo";
+alert(usuario.nombre); // "Pablo"
+```
+
+!!! note "Comparación por referencia"
+    Dos objetos son iguales sólo si son el mismo objeto
+
+    ```javascript
+    let a = {};
+    let b = a; // copio la referencia
+    let c = {};
+
+    alert( a == b ); // true, se refieren al mismo objeto
+    alert( a === b ); // true
+    alert( a == c ); // false
+    ```
+
+### Clonar y fusionar con Object.assign
+Si realmente necesitamos crear un clon, una copia independiente de un objeto y una simple referencia extra, podemos hacerlo de dos maneras:
+
+=== "Manual"
+    ```javascript
+    let usuario = {
+        nombre: "Juan",
+        edad: 30
+    };
+
+    let clon = {}; // objeto nuevo vacío
+
+    // copiamos todas las propiedades en clon
+    for (let key in usuario) {
+        clon[key] = usuario[key];
+    }
+
+    // ahora clon es una copia independiente
+    clon.nombre = "Pedro";
+    alert( usuario.nombre ); // "Juan"
+    ```
+=== "Object.assign"
+    ```javascript
+    let usuario = { nombre: "Juan" };
+
+    let permiso1 = { puedeVer: true };
+    let permiso2 = { puedeEditar: true };
+
+    // copia todas las propiedades de permiso1 y 2 a usuario
+    Object.assign(usuario, permiso1, permiso2);
+
+    // ahora usuario = { nombre: "Juan", puedeVer: true, puedeEditar: true }
+    ```
+
+    La sintaxis es:
+
+    ```
+    Object.assign(destino, [origen1, origen2, origen3...])
+    ```
+
+    Se puede usar como un sustituto de un bucle `for...in`:
+
+    ```javascript
+    let usuario = {
+        nombre: "Juan",
+        edad: 30
+    };
+
+    let clone = Object.assign({}, usuario);
+    ```
+    
+    
