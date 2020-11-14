@@ -130,7 +130,7 @@ showMessage(from, "Hello"); // *Ann*: Hello
 alert( from ); // Ann
 ```
 
-### Valores por defecto
+#### Valores por defecto
 Si no se proporciona un parámetro, su valor es _indefinido_.
 
 Por ejemplo, si invocamos la función `showMessage(from, text)` con solo un argumento:
@@ -200,6 +200,49 @@ A veces es mejor definir los valores por defecto _dentro de la función_, durant
     showCount(null); // unknown
     showCount(); // unknown
     ```
+
+#### Usando colecciones como parámetro
+Si estamos trabajando con **estructuras de datos** (objetos, arrays, etc) puede ser complicado programar una _función genérica_. Para ello podemos usar el **operador de propagación (`...`)** que indica a JavaScript que el parámetro es una **colección**.
+
+!!! note "Limitaciones"
+    Los tres puntos suspensivos sólo son una indicación general de que la variable que pasamos como parámetro es una colección, sin concretar el _tipo_. Permite acceder a métodos y propiedades comunes a las colecciones, pero no a todos los métodos específicos de cada una; no se pueden usar `push`, `pop` o `sort` que son métodos de arrays, sin indicar explícitamente que el parámetro lo es.
+
+```javascript
+let param = [];
+// funciones con un único parámetro: una colección
+
+// los ... indican que 'datos' es una colección
+let mostrar=function(...datos){
+    // como colección, podemos usar un bucle for-of
+    for (let element of datos) {
+        console.log(element);
+    }
+    console.log("Nombre " + datos[0]);
+}
+
+// Imprime en líneas separadas cada elemento
+mostrar("Pepe", "Álvarez Cano", 27, "Córdoba");
+```
+
+#### Argumentos spread
+¿Qué pasa si hemos definido una función con un número de parámetros pero no queremos repetirlos cada vez que la llamamos? Al contrario que en el caso anterior, usamos el **operador de propagación** _en la llamada_:
+
+```javascript
+let param = [];
+
+param.push("Pepe");
+param.push("Álvarez Cano");
+param.push(27);
+param.push("Cordoba");
+
+let mostrar = function(nombre, apellidos, edad, localidad){
+    console.log("Parámetros spread");
+    console.log(nombre + " " + apellidos + " " + edad + " " + localidad);
+}
+
+// Imprime en una misma línea todos los elementos del array
+mostrar(...param);
+```
 
 ### Devolver un valor
 
@@ -347,193 +390,3 @@ Nombres de funciones:
 - Una función es una acción, de modo que suelen ser verbos
 - Hay muchos prefijos verbales habituales para funciones (en inglés): `create`, `show`, `get`, `check` etc.
 
-## Expresiones de función
-En JavaScript una función se considera un tipo especial de _valor_.
-
-La sintaxis usada en el apartado anterior se denomina _declaración de función_; sin embargo, existe otra forma de declarar una función llamada _expresión de función_:
-
-```javascript
-let diHola = function() {
-    alert("Hola");
-};
-```
-
-Aquí la función se crea y se asigna a la variable explícitamente, como cualquier otro valor. No importa cómo se defina la función, solo es un valor almacenado en la variable `diHola`.
-
-!!! tip "¿Cuándo usarlas?"
-    En general **es mejor declarar las funciones** en lugar de asignarlas con expresiones.
-
-!!! note "Mencionar una función VS ejecutar una función"
-    Hay lenguajes donde cualquier mención de una función provoca su ejecución. En JavaScript eso no ocurre.
-
-    Una función es un **valor** (el código que la compone), que se ejecuta solo cuando añadimos los paréntesis.
-
-Es posible imprimir el código de la función:
-
-```javascript
-function diHola() {
-    alert("Hola");
-}
-
-alert(diHola); //muestra el ćodigo de la función, no la ejecuta
-```
-
-O copiar una función en otra variable
-
-```javascript
-function sayHi() {   // (1) create
-  alert( "Hello" );
-}
-
-let func = sayHi;    // (2) copy
-
-// (3) run the copy (it works)!
-func(); // Hello     
-// this still works too (why wouldn't it)
-sayHi(); // Hello    
-```
-
-!!! info "¿Por qué llevan un punto y coma al final?"
-    ```javascript
-    function diHola() {
-        //...
-    }
-
-    let diHola = function() {
-        //...
-    };
-    ```
-
-    JavaScript no exije un punto y coma al final de un **bloque de código** (entre llaves `{}`), pero sí al final de cualquier **sentencia**. Al usar la sintaxis de declaración de variables con `let algo = x`, que _es_ una sentencia, debemos añadirlo.
-
-### Funciones _callback_
-
-Tomemos como ejemplo una función que acepta tres parámetros:
-
-1. **pregunta**: el texto de la pregunta
-2. **si**: una _función_ que se ejecuta si la respuesta es sí
-3. **no**: una _función_ que se ejecuta si la respuesta es no.
-
-La función debe mostrar la pregunta y llamar a `si()` o `no()` según sea la respuesta:
-
-```javascript
-function preguntar(pregunta, si, no) {
-    if (confirm(pregunta)) si()
-    else no();
-}
-
-function showOk() {
-    alert( "Has dicho que sí." );
-}
-
-function showCancel() {
-    alert( "Has cancelado la ejecución." );
-}
-
-// Uso
-preguntar("¿Estás de acuerdo?", showOk, showCancel);
-```
-
-**Los parámetros `showOk` y `showCancel` se llaman funciones de rellamada (_callback functions_) o simplemente _callbacks_.**
-
-La idea es pasar una función y esperar a que le "devuelvan la llamada" en otro momento si hace falta. En el ejemplo, `showOk` es el _callback_ para la respuesta "sí", y `showCancel`para un "no".
-
-!!! info "Abreviar código con funciones _anónimas_"
-    ```javascript
-    function preguntar(pregunta, si, no) {
-        if (confirm(pregunta)) si()
-        else no();
-    }
-
-    preguntar(
-        "¿Estás de acuerdo?",
-        function() {alert("Has dicho que sí.");},
-        function() {alert("Has cancelado la ejecución.");}
-    );
-    ```
-
-    Las funciones dentro del `preguntar(...)` no tienen nombre y por eso se llaman _anónimas_; no son accesibles fuera de esa declaración.
-
-### Expresiones de función VS Declaraciones de función
-
-=== "Sintaxis":
-    ```javascript
-    // Declaración de función
-    function suma(a,b) {
-        return a + b;
-    }
-
-    // Expresión de función
-    let suma = function(a,b){
-        return a + b;
-    };
-    ```
-=== "Cuándo se crean"
-    - Las expresiones de función se crean **cuando la ejecución llega a ese punto**
-    - Sólo están disponibles **a partir de ese momento**.
-    - Sin embargo, una función declarada puede ser llamada **antes de su definición**.
-
-=== "Visibilidad"
-    En **modo estricto**, una declaración de función sólo es visible _dentro del bloque en el que se declara_.
-
-    Si quisiéramos definir una función de forma diferente según una _condición_, sólo funcionaría bien con expresiones de función:
-
-    === "Con declaración"
-        ```javascript
-        let age = prompt("What is your age?", 18);
-
-        // conditionally declare a function
-        if (age < 18) {
-
-          function welcome() {
-            alert("Hello!");
-          }
-
-        } else {
-
-          function welcome() {
-            alert("Greetings!");
-          }
-
-        }
-
-    === "Con expresiones"
-        // ...use it later
-        welcome(); // Error: welcome is not defined
-        ```
-
-        ```javascript
-        let age = prompt("What is your age?", 18);
-
-        let welcome;
-
-        if (age < 18) {
-
-          welcome = function() {
-            alert("Hello!");
-          };
-
-        } else {
-
-          welcome = function() {
-            alert("Greetings!");
-          };
-
-        }
-
-        welcome(); // ok now
-        ```
-
-    === "Más breve aún"
-        
-        ```javascript
-        let age = prompt("What is your age?", 18);
-
-        let welcome = (age < 18) ?
-          function() { alert("Hello!"); } :
-          function() { alert("Greetings!"); };
-
-        welcome(); // ok now
-        ```
-
-## Funciones Flecha

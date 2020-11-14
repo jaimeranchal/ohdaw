@@ -68,14 +68,18 @@ nav:
                 - 'Hola mundo': 'Lenguajes/javascript/fundamentos.md'
                 - Sintaxis: 'Lenguajes/javascript/sintaxis.md'
                 - Variables: 'Lenguajes/javascript/variables.md'
-                - 'Tipos de datos': 'Lenguajes/javascript/tipos.md'
+                - 'Tipos básicos': 'Lenguajes/javascript/tipos.md'
                 - Operadores: 'Lenguajes/javascript/operadores.md'
                 - 'Comparar variables': 'Lenguajes/javascript/comparar.md'
                 - Condicionales: 'Lenguajes/javascript/condicionales.md'
                 - Switch: 'Lenguajes/javascript/switch.md'
-                - Funciones: 'Lenguajes/javascript/funciones.md'
             - 'Tipos de Datos':
                 - Arrays: 'Lenguajes/javascript/dt.arrays.md'
+            - Funciones: 
+                - Introducción: 'Lenguajes/javascript/funciones.md' 
+                - 'Expresiones de función': 'Lenguajes/javascript/funciones.expr.md'
+                - Retrollamada: 'Lenguajes/javascript/funciones-callback.md'
+                - 'Funciones flecha': 'Lenguajes/javascript/funciones-flecha.md'
             - 'Objetos y Clases':
                 - Introducción: 'Lenguajes/javascript/obj.intro.md'
                 - 'Objetos de primer nivel': 'Lenguajes/javascript/obj.primer_nivel.md'
