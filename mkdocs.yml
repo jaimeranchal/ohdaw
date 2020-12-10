@@ -34,6 +34,10 @@ markdown_extensions:
     - pymdownx.snippets:
         base_path: '/home/jaime/Proyectos/ohdaw/docs/'
         check_paths: true
+# Plugins
+plugins:
+    - search
+    - print-site
 
 # Extra
 extra_css:
@@ -119,6 +123,8 @@ nav:
                 - Logs: 'Herramientas/Servidores/apache-logs.md'
                 - 'Tipos MIME': 'Herramientas/Servidores/apache-mime.md'
                 - Autenticación: 'Herramientas/Servidores/apache-auth.md'
+            - Tomcat:
+                - Introducción: 'Herramientas/Servidores/tomcat-intro.md'
 #        - Contenedores: 
 #            - Docker: 'Herramientas/Contenedores/docker.md' 
 #            - Kubernetes: 'Herramientas/Contenedores/kubernetes.md' 

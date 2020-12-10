@@ -66,3 +66,37 @@ Utilizan una dirección IP de conexión para elegir qué servidor virtual ofrece
 
 
 ## Ejemplos
+
+=== "Con SSL y https"
+    ```conf
+    <IfModule mod_ssl.c>
+    #<VirtualHost _default_:443>
+    <VirtualHost 192.168.200.250:443>
+        ServerAdmin web-autenticacion@empresa-proyecto.com
+        ServerName web-con-autenticacion-basic.empresa-proyecto.com
+        DocumentRoot /var/www/web-con-autenticacion-basic
+        <Directory /var/www/web-con-autentitacion-basic/>
+            AllowOverride AuthConfig 
+
+            Options Indexes FollowSymLinks MultiViews
+            Order allow,deny
+            allow from all
+        </Directory>
+        ErrorLog ${APACHE_LOG_DIR}/error-web-autenticacion-basic.log
+        LogLevel warn
+        CustomLog ${APACHE_LOG_DIR}/ssl_access-web-autenticacion-basic.log combined
+        SSLEngine on
+        SSLCertificateFile    /etc/apache2/tus-ssl/tupaginaweb.crt
+        SSLCertificateKeyFile /etc/apache2/tus-ssl/tupaginaweb.key
+    </VirtualHost>
+    </IfModule>
+    ```
+=== "htaccess"
+    ```conf
+    AuthType Basic
+    AuthName "Web con Autenticacion Basic"
+    AuthUserFile /etc/apache2/web.htpasswd
+    ##Require valid-user 
+    Require user user1
+    ```
+    
