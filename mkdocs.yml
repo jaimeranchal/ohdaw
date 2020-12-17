@@ -91,13 +91,21 @@ nav:
                 - Métodos: 'Lenguajes/javascript/obj.metodos.md'
                 - Clases: 'Lenguajes/javascript/clases.md'
         - Php:
-            - Introducción: 'Lenguajes/php/intro.md'
-            - Tutorial básico: 'Lenguajes/php/tutorial.md'
-            - Formularios: 'Lenguajes/php/formularios.md'
-            - 'Validación de datos': 'Lenguajes/php/validar.md'
-            - 'Manejo de Objetos': 'Lenguajes/php/objetos.md'
-            - 'Bases de datos': 'Lenguajes/php/bbdd.md'
-            - Sesiones: 'Lenguajes/php/sesiones.md'
+            - Introducción: 
+                - 'Qué es PHP': 'Lenguajes/php/intro.md'
+                - Tutorial básico: 'Lenguajes/php/tutorial.md'
+                - Formularios: 'Lenguajes/php/formularios.md'
+                - 'Validación de datos': 'Lenguajes/php/validar.md'
+            - 'Bases de datos y usuarios':
+                - 'MySQLi y PDO': 'Lenguajes/php/bbdd.md'
+                - Sesiones: 'Lenguajes/php/sesiones.md'
+            - 'Seguridad y persistencia':
+                - Autenticación: 'Lenguajes/php/autenticacion.md'
+                - Cookies: 'Lenguajes/php/cookies.md'
+            - POO:
+                - 'Objetos': 'Lenguajes/php/objetos.md'
+            - Frameworks:
+                - Laravel: 'Lenguajes/php/laravel-intro.md'
         - SQL: 
             - Primeros pasos: 'Lenguajes/sql/intro.md'
             - Definir tablas: 'Lenguajes/sql/DDL.md'
