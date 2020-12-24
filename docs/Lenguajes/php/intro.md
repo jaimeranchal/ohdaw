@@ -10,16 +10,16 @@ Fue creado inicialmente por el programador danés-canadiense Rasmus Lerdorf en 1
 ```php
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Ejemplo</title>
-    </head>
-    <body>
+  <head>
+    <title>Ejemplo</title>
+  </head>
+  <body>
 
-        <?php
-            echo "¡Hola, soy un script de PHP!";
-        ?>
+    <?php
+      echo "¡Hola, soy un script de PHP!";
+    ?>
 
-    </body>
+  </body>
 </html>
 ```
 

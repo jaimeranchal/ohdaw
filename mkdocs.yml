@@ -103,14 +103,30 @@ nav:
                 - Autenticación: 'Lenguajes/php/autenticacion.md'
                 - Cookies: 'Lenguajes/php/cookies.md'
             - POO:
-                - 'Objetos': 'Lenguajes/php/objetos.md'
+                - 'Objetos': 'Lenguajes/php/clases.objetos.md'
+                - 'Visibilidad y herencia': 'Lenguajes/php/clases.visib-herencia.md'
+                - 'Traits': 'Lenguajes/php/clases.traits.md'
+                - 'Clases abstractas': 'Lenguajes/php/clases.abstract.md'
+                - 'Interfaces': 'Lenguajes/php/clases.interfaces.md'
+                - 'Métodos mágicos': 'Lenguajes/php/clases.magic.md'
+                - 'Métodos y atributos estáticos': 'Lenguajes/php/clases.static.md'
+                - 'Constantes': 'Lenguajes/php/clases.const.md'
+                - 'Namespaces': 'Lenguajes/php/clases.namespaces.md'
             - Frameworks:
                 - Laravel: 'Lenguajes/php/laravel-intro.md'
         - SQL: 
-            - Primeros pasos: 'Lenguajes/sql/intro.md'
-            - Definir tablas: 'Lenguajes/sql/DDL.md'
-            - Modificar datos: 'Lenguajes/sql/DML.md'
-            - Buscar datos: 'Lenguajes/sql/DQL.md'
+            - 'BD Relacionales':
+                - 'El modelo relacional': 'Lenguajes/sql/0.mr-intro.md'
+                - 'Crear un modelo': 'Lenguajes/sql/0.mr-er.md'
+            - 'Fundamentos': 
+                - 'Qué es SQL': 'Lenguajes/sql/1.sql-intro.md'
+                - Operadores: 'Lenguajes/sql/1.sql-operadores.md'
+                - 'Tipos de datos': 'Lenguajes/sql/1.sql-data.md'
+                - Funciones: 'Lenguajes/sql/1.sql-func.md'
+            - 'Crear y modificar bbdd':
+                - 'Definir tablas': 'Lenguajes/sql/2.sql-ddl.md'
+                - 'Modificar datos': 'Lenguajes/sql/2.sql-dml.md'
+            - Consultas: 'Lenguajes/sql/3.sql-dql.md'
 #    - Sistemas:
 #        - Linux: 
 #            - Sistema: 'Sistemas/linux/sysadmin.md'
