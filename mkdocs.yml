@@ -90,6 +90,9 @@ nav:
                 - 'Objetos Nativos': 'Lenguajes/javascript/obj.nativos.md'
                 - Métodos: 'Lenguajes/javascript/obj.metodos.md'
                 - Clases: 'Lenguajes/javascript/clases.md'
+            - Cookies: 'Lenguajes/javascript/cookies.md'
+            - Eventos: 'Lenguajes/javascript/eventos.md'
+            - Formularios: 'Lenguajes/javascript/formularios.md'
         - Php:
             - Introducción: 
                 - 'Qué es PHP': 'Lenguajes/php/intro.md'
