@@ -92,13 +92,17 @@ nav:
                 - Clases: 'Lenguajes/javascript/clases.md'
             - Cookies: 'Lenguajes/javascript/cookies.md'
             - Eventos: 'Lenguajes/javascript/eventos.md'
-            - Formularios: 'Lenguajes/javascript/formularios.md'
+            - Formularios: 
+                - 'Manejo básico': 'Lenguajes/javascript/formularios.md'
+                - Captchas: 'Conceptos/captchas.md'
         - Php:
             - Introducción: 
                 - 'Qué es PHP': 'Lenguajes/php/intro.md'
                 - Tutorial básico: 'Lenguajes/php/tutorial.md'
-                - Formularios: 'Lenguajes/php/formularios.md'
+            - Formularios: 
+                - 'Manejo básico': 'Lenguajes/php/formularios.md'
                 - 'Validación de datos': 'Lenguajes/php/validar.md'
+                - Captchas: 'Conceptos/captchas.md'
             - 'Bases de datos y usuarios':
                 - 'MySQLi y PDO': 'Lenguajes/php/bbdd.md'
                 - Sesiones: 'Lenguajes/php/sesiones.md'
