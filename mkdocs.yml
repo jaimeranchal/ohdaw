@@ -95,6 +95,7 @@ nav:
             - Formularios: 
                 - 'Manejo básico': 'Lenguajes/javascript/formularios.md'
                 - Captchas: 'Conceptos/captchas.md'
+            - 'RegEx': 'Lenguajes/javascript/regex.md'
         - Php:
             - Introducción: 
                 - 'Qué es PHP': 'Lenguajes/php/intro.md'
@@ -156,6 +157,7 @@ nav:
                 - Autenticación: 'Herramientas/Servidores/apache-auth.md'
             - Tomcat:
                 - Introducción: 'Herramientas/Servidores/tomcat-intro.md'
+            - ProFTPd: 'Herramientas/Otros/proftpd.md'
 #        - Contenedores: 
 #            - Docker: 'Herramientas/Contenedores/docker.md' 
 #            - Kubernetes: 'Herramientas/Contenedores/kubernetes.md' 

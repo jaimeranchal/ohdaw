@@ -20,11 +20,12 @@ Puede hacerse de tres maneras:
 ## Registro de eventos avanzado
 
 Este último método es el recomendado actualmente. El método `addEventListener()` permite definir tantas acciones como queremos para un determinado evento. Admite **tres parámetros**:
-    1. evento
-    2. función
-    3. orden de ejecución:
-        - en captura (_true_)
-        - en burbujeo (_false_)
+
+1. evento
+2. función
+3. orden de ejecución:
+    - en captura (_true_)
+    - en burbujeo (_false_)
 
 === "Sintaxis"
     ```javascript

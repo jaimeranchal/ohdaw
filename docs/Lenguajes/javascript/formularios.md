@@ -12,14 +12,14 @@ Para acceder a un formulario usamos el **objeto** _Form_, que a su vez es una pr
     let formulario = document.getElementById("contacto");
 
     /* Método 2 */
-    let formularios = document.getElementByTagName("form"); //array de forms
+    let formularios = document.getElementsByTagName("form"); //array de forms
     let formulario1 = formularios[0]; // primer formulario
     // variante en una línea
-    let formulario = document.getElementByTagName("form")[0];
+    let formulario = document.getElementsByTagName("form")[0];
 
     // Filtrar por elemento padre (menú lateral p.e.)
     let menu = document.getElementById("menulateral");
-    let formularios = menu.getElementByTagName("form");
+    let formularios = menu.getElementsByTagName("form");
     let formulario1 = formularios[0];
 
     /* Método 3 */
@@ -99,7 +99,7 @@ En un formulario hay **4 elementos** de tipo texto:
     | Nombre     | Descripción                       |
     |------------|-----------------------------------|
     | `select()` | Selecciona el contenido del campo |
-=== "Ejemplo":
+=== "Ejemplo"
     ```html
     <!DOCTYPE  html>
     <html>
