@@ -157,7 +157,7 @@ nav:
                 - Autenticación: 'Herramientas/Servidores/apache-auth.md'
             - Tomcat:
                 - Introducción: 'Herramientas/Servidores/tomcat-intro.md'
-            - ProFTPd: 'Herramientas/Otros/proftpd.md'
+            - ProFTPd: 'Herramientas/Servidores/proftpd.md'
 #        - Contenedores: 
 #            - Docker: 'Herramientas/Contenedores/docker.md' 
 #            - Kubernetes: 'Herramientas/Contenedores/kubernetes.md' 
