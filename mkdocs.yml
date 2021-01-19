@@ -53,10 +53,11 @@ nav:
 #            - Presentación: 'Lenguajes/html/intro.md'
 #            - Aplicar estilos: 'Lenguajes/html/aspecto.md'
 #            - Avanzado: 'Lenguajes/html/avanzado.md'
-#        - CSS: 
+        - CSS: 
 #            - Presentación: 'Lenguajes/css/intro.md'
 #            - Optimización: 'Lenguajes/css/optimizacion.md'
 #            - Preprocesadores: 'Lenguajes/css/preprocesadores.md'
+            - 'Diseño responsivo': 'Lenguajes/css/responsive.md'
 #        - Java: 
 #            - Presentación: 'Lenguajes/java/intro.md'
 #            - 'Ejemplo de programa': 'Lenguajes/java/ejemplo00.md'
