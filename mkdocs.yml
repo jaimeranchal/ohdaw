@@ -97,6 +97,13 @@ nav:
                 - 'Manejo básico': 'Lenguajes/javascript/formularios.md'
                 - Captchas: 'Conceptos/captchas.md'
             - 'RegEx': 'Lenguajes/javascript/regex.md'
+            - 'Manejo del DOM': 'Lenguajes/javascript/DOM.md'
+            - jQuery:
+                - Introducción: 'Lenguajes/javascript/jQuery-intro.md'
+                - Efectos: 'Lenguajes/javascript/jQuery-efectos.md'
+                - 'Métodos HTML': 'Lenguajes/javascript/jQuery-html.md'
+                - 'Moverse por el DOM': 'Lenguajes/javascript/jQuery-dom.md'
+                - Ajax: 'Lenguajes/javascript/jQuery-ajax.md'
         - Php:
             - Introducción: 
                 - 'Qué es PHP': 'Lenguajes/php/intro.md'
