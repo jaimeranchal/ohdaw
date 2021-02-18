@@ -130,6 +130,7 @@ $apple = new Fruit("Apple");
 ```
 
 ## Modificadores de acceso
+
 PHP admite tres modificadores de visibilidad:
 
 - **public**: accesible en cualquier parte. Opción _por defecto_.
@@ -179,6 +180,7 @@ PHP admite tres modificadores de visibilidad:
     ```
     
 ## Herencia
+
 La herencia significa que una clase hijo _hereda_ las propiedades y métodos públicos o protegidos de la clase padre. Además de estos puede tener sus propias propiedades y métodos.
 
 ### Declaración

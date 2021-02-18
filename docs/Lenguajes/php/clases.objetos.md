@@ -23,13 +23,16 @@ Una clase define
 
 Para crear un objeto hay que instanciar una clase:
 
-=== "Instanciar un objeto"
+=== "Definir una clase"
     ```php
     <?php
     class Coche {
      // Contenido de la clase
     }
-
+    ```
+=== "Instanciar un objeto"
+    ```php
+    <?php
     $miCoche = new Coche(); // Objeto
     ?>
     ```
@@ -100,9 +103,6 @@ class Coche {
 //...
 ?>
 ```
-
-!!! note "Variable `$this`"
-    La variable `$this` se puede utilizar en cualquier método, y hace referencia al objeto que hemos instanciado, en este caso `$miCoche`. 
 
 Podemos obtener el mismo resultado que antes para mostrar el color del coche pero ahora utilizando un método para mostrar la propiedad color:
 
@@ -204,3 +204,81 @@ printCaracteristicas($otroCoche);
 
 La función `printCaracteristicas()` requiere un argumento, `$cocheConcreto`, que es una instancia de la clase Coche que mostrará las características del propio objeto.
 
+### La palabra clave `$this`
+La palabra `$this` se refiere al **objeto actual** y sólo está disponible _dentro de métodos_:
+
+```php
+<?php
+class Coche {
+    public $marca;
+    function set_marca($marca) {
+        // Aquí $this sustituye a la instancia del objeto Coche
+        $this -> marca = $marca;
+    }
+}
+$coche1 = new Coche();
+// Fuera de un método no podemos usar $this
+$coche1->set_name('BMW');
+?>
+```
+
+### `instanceof`
+Esta palabra clave sirve para comprobar si un objeto es una instancia de una determinada clase:
+
+```php
+<?php
+$coche2 = new Coche();
+var_dump($coche2 instanceof Coche); //true
+?>
+```
+
+### Constructores
+
+Un método constructor nos permite inicializar las propiedades de un objeto en el momento de su creación. Si declaras una función `__construct()` PHP la usará para crear un objeto de esa clase.
+
+Si usas este método no es necesario crear un método `set_propiedad()` (a menos que necesites un _setter_ por separado):
+
+```php
+<?php
+class Coche {
+  public $marca;
+  public $color;
+
+  function __construct($marca) {
+    $this->marca = $marca;
+  }
+  function get_marca() {
+    return $this->marca;
+  }
+}
+
+$coche3 = new Coche("Seat");
+echo $coche3->get_marca();
+?>
+```
+
+!!! important "Sobrecarga de métodos"
+    PHP **no admite sobrecarga** de métodos, como sí hacen otros lenguajes POO.
+
+### Destrucción de Objetos
+
+Es un método análogo al constructor, que permite eliminar un objeto, porque sea necesario, o porque termine de ejecutarse el script. Para definir nuestro propio método destructor usamos `__destruct()`:
+
+```php
+<?php
+class Coche {
+  public $marca;
+  public $color;
+
+  function __construct($marca) {
+    $this->marca = $marca;
+  }
+  // Invocada automáticamente al terminar el script
+  function __destruct() {
+    echo "El coche es un {$this->marca}.";
+  }
+}
+
+$coche4 = new Coche("Kia");
+?>
+```
