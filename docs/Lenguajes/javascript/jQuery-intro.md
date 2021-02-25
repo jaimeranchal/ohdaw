@@ -84,20 +84,114 @@ Sirven para encontrar elementos HTML.
 - Se pueden usar todos los **selectores CSS**, más alguno particular de jQuery.
 - Todos los selectores empiezan con el **signo del dólar** y los **paréntesis** `$()`
 
-| Sintaxis                   | Descripción                                                                  |
-|----------------------------|------------------------------------------------------------------------------|
-| `$("*")`                   | Selecciona todos los elementos                                               |
-| `$(this)`                  | El elemento HTML actual                                                      |
-| `$("p.intro")`             | todos los `<p>` con la clase "intro"                                         |
-| `$("p:first")`             | El primer elemento `<p>`                                                     |
-| `$("ul li:first")`         | El primer elemento `<li>` del primer `<ul>`                                  |
-| `$("ul li:first-child")`   | El primer `<li>` de cada `<ul>`                                              |
-| `$("[href]")`              | Todos los elementos con un atributo `href`                                   |
-| `$("a[target='_blank']")`  | Todos los `<a>` con un valor para el atributo _target_ "_blank"              |
-| `$("a[target!='_blank']")` | Todos los `<a>` con un valor para el atributo _target_ diferente de "_blank" |
-| `$(":button")`             | Todos los `<button>` y `<input>` con type="button"                           |
-| `$("tr:even")`             | Todos los elementos `<tr>` pares                                             |
-| `$("tr:odd")`              | Todos los elementos `<tr>` impares                                           |
+=== "css"
+    ```javascript
+    $('*')        // todos los elementos
+    $('p')        // todos los <p>
+    $('p', 'a')   // todos los <p> y todos los <a>
+    $('p a')      // todos los <a> hijos de <p>
+    $('li.clase') // todos los <li> con la clase indicada
+    $('li>p')     // todos los <p> hijos directos de <li>
+    $('h1+p')     // todos los <p> inmediatamente por un <h1> hermano
+    $('p:has(b)') // todos los <p> que contienen un <b>
+    $('.clase')   // todos los elementos con la clase x
+    $('#id')      // todos los elementos con esa id
+    $('p:empty')  // todos los <p> vacíos
+    $('img[alt]') // todos los <img> con atributo "alt"
+    $(':button[id*=boton]') // todos los <button> cuyo "id" sea 'boton'
+    $('a[href$=.pdf]') // todos los <a> cuyo "href" acabe en 'pdf'
+    $('a[title^=.lr]') // todos los <a> cuyo "title" empiece por '.lr'
+    ```
+=== "jquery"
+    ```javascript
+    $('p:first')            // primer <p>
+    $('p:last')             // último <p>
+    $('li:first-child')     // todos los <li> primeros hijos
+    $('li:only-child')      // todos los <li> hijos únicos
+    $('li:nth-child(3)')    // todos los <li> terceros hijos
+    $('tr:nth-child(odd)')  // todos los <tr> impares
+    $('tr:nth-child(even)') // todos los <tr> pares
+    $('p:odd')              // <p> impares
+    $('p:eq(1)')            // segundo <p> (asumiendo que el primero es 0)
+    $('p:gt(1)')            // todos los <p> a partir de la 2 posicion
+    $('p:lt(1)')            // todos los <p> antes de las 2 posicion
+    $('p:contains(texto)')  // todos los <p> con 'texto'
+    ```
+=== "formulario"
+    ```javascript
+    $('input') // todos los input
+    // todos los input con el atributo indicado tras los dos puntos
+    $(':text')
+    $(':checkbox')
+    $(':button')
+    ...
+    $(':enabled') // todos los elementos activados
+    $(':disabled') // todos los elementos desactivados
+    $(':checked') // ¿está seleccionado? (radiobutton + checkbox)
+        $('objeto').is(':checked') //booleano
+        $(':radio:checked').val() // valor del radio seleccionado
+    $(':selected') // ¿está seleccionado? (option)
+        $('select option:selected') // elementos selecc.
+        $('select option:selected').text() // valor de la opción selecc.
+        $('select option:selected').prop("value") // valor
+    ```
+
+### Funciones
+
+=== "Filtros"
+    `not()`
+    :   Elementos que **no cumplen** los criterios
+        ```javascript
+       `$('div').not('.verde, #azul').css('border-color', 'red')`
+        ```
+
+    `filter()`
+    :   filtra o busca una selección de elementos y la reduce alos que cumplen un filtro adicional
+        ```javascript
+        $('div').filter(".div1").css('background-color', 'blue');
+        ```
+    `slice(inicio, fin)`
+    :   Recorta una selección de elementos según su posición
+        ```javascript
+        $('p').slice(2,3);
+        // selecciona todos los <p> y filtra sólo el tercer párrafo
+        ```
+
+    `find()`
+    :   Busca una selección de elementos y la reduce a los que cumplen la condición
+        ```javascript
+        $('div').find(".div1").css('background-color', 'blue');
+        ```
+=== "Añadir contenido"
+=== "Eliminar"
+=== "Atributos"
+=== "Atributos"
+=== "css"
+=== "Bucles"
+
+#### Bucles automáticos
+
+Cuando se aplica una función jQuery a una **selección de elementos** no hace falta generar un bucle; se aplica automáticamente
+
+```javascript
+$('.misBotones').hide();
+// oculta TODOS los botones con la clase ".misBotones"
+```
+
+#### Encadenar funciones
+
+jQuery permite _apilar_ funciones una detrás de otra, que se ejecutarán en sucesión a la selección
+
+```javascript
+$('.misBotones').width(300).heigth(300).text('Hola').fadeIn(1000);
+//  En este ejemplo se selecciona todos los elementos cuya clase es ‘misBotones’ y automáticamente se le aplican cuatro funciones.
+
+// Otra forma:
+$('.misBotones').width(300)
+.heigth(300)
+.text('Hola')
+.fadeIn(1000);
+```
 
 ### Eventos
 
