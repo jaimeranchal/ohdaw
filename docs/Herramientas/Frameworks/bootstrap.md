@@ -104,13 +104,13 @@ Página básica con un contenedor _fluido_ que ocupe todo el ancho ( _full width
 Un ejemplo de página con BS4:
 
 ```html
---8<-- "Herramientas/Frameworks/bs4.ejemplo01.html"
+"Herramientas/Frameworks/bs4.ejemplo01.html"
 ```
 
 Otro ejemplo un poco más elaborado:
 
 ```html
---8<-- "Herramientas/Frameworks/bs4.ejemplo02.html"
+"Herramientas/Frameworks/bs4.ejemplo02.html"
 ```
 ### Contenedores
 
