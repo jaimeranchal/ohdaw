@@ -2,6 +2,7 @@ site_name: Oh Daw!
 repo_url: https://github.com/jaimeranchal/ohdaw 
 site_description: Notas de un desarrollador web
 site_author: Jaime Ranchal
+dev_addr: '127.0.0.1:8001'
 
 # Ajustes del tema
 theme:
@@ -26,7 +27,7 @@ markdown_extensions:
     - admonition
     - def_list
     - pymdownx.details
-    - pymdownx.highlight
+    # - pymdownx.highlight
     - pymdownx.tabbed
     - pymdownx.superfences
     - pymdownx.inlinehilite
@@ -40,8 +41,12 @@ plugins:
     - print-site
 
 # Extra
+extra_javascript:
+    - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js
+    - extra/js/config.js
 extra_css:
-    - stylesheets/extra.css
+    - extra/css/extra.css
+    - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/atelier-lakeside-light.min.css
 
 # Árbol de documentos
 nav:
@@ -128,8 +133,11 @@ nav:
                 - 'Métodos y atributos estáticos': 'Lenguajes/php/clases.static.md'
                 - 'Constantes': 'Lenguajes/php/clases.const.md'
                 - 'Namespaces': 'Lenguajes/php/clases.namespaces.md'
-            - Frameworks:
-                - Laravel: 'Lenguajes/php/laravel-intro.md'
+            - Laravel:
+                - Introduccion: 'Lenguajes/php/Laravel/intro.md'
+                - 'Bases de datos': 'Lenguajes/php/Laravel/databases.md'
+                - 'Autentificación': 'Lenguajes/php/Laravel/auth.md'
+                - 'Autorización': 'Lenguajes/php/Laravel/auto.md'
         - SQL: 
             - 'BD Relacionales':
                 - 'El modelo relacional': 'Lenguajes/sql/0.mr-intro.md'
