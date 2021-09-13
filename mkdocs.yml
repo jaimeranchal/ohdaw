@@ -45,143 +45,18 @@ extra_css:
 
 # Árbol de documentos
 nav:
-    - Principal:  
-        - Inicio: 'index.md'
-        - FAQ: 'FAQ/faq.md'
-    - Lenguajes:
-#        - HTML: 
-#            - Presentación: 'Lenguajes/html/intro.md'
-#            - Aplicar estilos: 'Lenguajes/html/aspecto.md'
-#            - Avanzado: 'Lenguajes/html/avanzado.md'
-        - CSS: 
-#            - Presentación: 'Lenguajes/css/intro.md'
-#            - Optimización: 'Lenguajes/css/optimizacion.md'
-#            - Preprocesadores: 'Lenguajes/css/preprocesadores.md'
-            - 'Diseño responsivo': 'Lenguajes/css/responsive.md'
-#        - Java: 
-#            - Presentación: 'Lenguajes/java/intro.md'
-#            - 'Ejemplo de programa': 'Lenguajes/java/ejemplo00.md'
-#            - 'Conceptos básicos':
-#                - Sintaxis: 'Lenguajes/java/01.sintaxis.md'
-#                - 'Tipos de datos': 'Lenguajes/java/02.tipos.md'
-#                - Estructuras: 'Lenguajes/java/03.estructuras.md'
-#                - 'Objetos y clases': 'Lenguajes/java/04.objetos-clases.md'
-#                - Consejos: 'Lenguajes/java/consejos.md'
-        - JavaScript: 
-            - Introducción: 'Lenguajes/javascript/intro.md'
-            - Fundamentos: 
-                - 'Hola mundo': 'Lenguajes/javascript/fundamentos.md'
-                - Sintaxis: 'Lenguajes/javascript/sintaxis.md'
-                - Variables: 'Lenguajes/javascript/variables.md'
-                - 'Tipos básicos': 'Lenguajes/javascript/tipos.md'
-                - Operadores: 'Lenguajes/javascript/operadores.md'
-                - 'Comparar variables': 'Lenguajes/javascript/comparar.md'
-                - Condicionales: 'Lenguajes/javascript/condicionales.md'
-                - Switch: 'Lenguajes/javascript/switch.md'
-            - 'Tipos de Datos':
-                - Arrays: 'Lenguajes/javascript/dt.arrays.md'
-            - Funciones: 
-                - Introducción: 'Lenguajes/javascript/funciones.md' 
-                - 'Expresiones de función': 'Lenguajes/javascript/funciones.expr.md'
-                - Retrollamada: 'Lenguajes/javascript/funciones-callback.md'
-                - 'Funciones flecha': 'Lenguajes/javascript/funciones-flecha.md'
-            - 'Objetos y Clases':
-                - Introducción: 'Lenguajes/javascript/obj.intro.md'
-                - 'Objetos de primer nivel': 'Lenguajes/javascript/obj.primer_nivel.md'
-                - 'Objetos Nativos': 'Lenguajes/javascript/obj.nativos.md'
-                - Métodos: 'Lenguajes/javascript/obj.metodos.md'
-                - Clases: 'Lenguajes/javascript/clases.md'
-            - Cookies: 'Lenguajes/javascript/cookies.md'
-            - Eventos: 'Lenguajes/javascript/eventos.md'
-            - Formularios: 
-                - 'Manejo básico': 'Lenguajes/javascript/formularios.md'
-                - Captchas: 'Conceptos/captchas.md'
-            - 'RegEx': 'Lenguajes/javascript/regex.md'
-            - 'Manejo del DOM': 'Lenguajes/javascript/DOM.md'
-            - jQuery:
-                - Introducción: 'Lenguajes/javascript/jQuery-intro.md'
-                - Efectos: 'Lenguajes/javascript/jQuery-efectos.md'
-                - 'Métodos HTML': 'Lenguajes/javascript/jQuery-html.md'
-                - 'Moverse por el DOM': 'Lenguajes/javascript/jQuery-dom.md'
-                - Ajax: 'Lenguajes/javascript/jQuery-ajax.md'
-        - Php:
-            - Introducción: 
-                - 'Qué es PHP': 'Lenguajes/php/intro.md'
-                - Tutorial básico: 'Lenguajes/php/tutorial.md'
-            - Formularios: 
-                - 'Manejo básico': 'Lenguajes/php/formularios.md'
-                - 'Validación de datos': 'Lenguajes/php/validar.md'
-                - Captchas: 'Conceptos/captchas.md'
-            - 'Bases de datos y usuarios':
-                - 'MySQLi y PDO': 'Lenguajes/php/bbdd.md'
-                - Sesiones: 'Lenguajes/php/sesiones.md'
-            - 'Seguridad y persistencia':
-                - Autenticación: 'Lenguajes/php/autenticacion.md'
-                - Cookies: 'Lenguajes/php/cookies.md'
-            - POO:
-                - 'Objetos': 'Lenguajes/php/clases.objetos.md'
-                - 'Visibilidad y herencia': 'Lenguajes/php/clases.visib-herencia.md'
-                - 'Traits': 'Lenguajes/php/clases.traits.md'
-                - 'Clases abstractas': 'Lenguajes/php/clases.abstract.md'
-                - 'Interfaces': 'Lenguajes/php/clases.interfaces.md'
-                - 'Métodos mágicos': 'Lenguajes/php/clases.magic.md'
-                - 'Métodos y atributos estáticos': 'Lenguajes/php/clases.static.md'
-                - 'Constantes': 'Lenguajes/php/clases.const.md'
-                - 'Namespaces': 'Lenguajes/php/clases.namespaces.md'
-            - Frameworks:
-                - Laravel: 'Lenguajes/php/laravel-intro.md'
-        - SQL: 
-            - 'BD Relacionales':
-                - 'El modelo relacional': 'Lenguajes/sql/0.mr-intro.md'
-                - 'Crear un modelo': 'Lenguajes/sql/0.mr-er.md'
-            - 'Fundamentos': 
-                - 'Qué es SQL': 'Lenguajes/sql/1.sql-intro.md'
-                - Operadores: 'Lenguajes/sql/1.sql-operadores.md'
-                - 'Tipos de datos': 'Lenguajes/sql/1.sql-data.md'
-                - Funciones: 'Lenguajes/sql/1.sql-func.md'
-            - 'Crear y modificar bbdd':
-                - 'Definir tablas': 'Lenguajes/sql/2.sql-ddl.md'
-                - 'Modificar datos': 'Lenguajes/sql/2.sql-dml.md'
-            - Consultas: 'Lenguajes/sql/3.sql-dql.md'
-#    - Sistemas:
-#        - Linux: 
-#            - Sistema: 'Sistemas/linux/sysadmin.md'
-#            - Usuarios: 'Sistemas/linux/useradmin.md'
-#            - Redes: 'Sistemas/linux/netadmin.md'
-#        - Windows: 
-#            - Sistema: 'Sistemas/windows/sysadmin.md'
-#            - Usuarios: 'Sistemas/windows/useradmin.md'
-#            - Redes: 'Sistemas/windows/netadmin.md'
-#
-    - Herramientas: 
-        - Servidores:
-            - Apache: 
-                - Introducción: 'Herramientas/Servidores/apache-intro.md'
-                - Directivas: 'Herramientas/Servidores/apache-directivas.md'
-                - Secciones: 'Herramientas/Servidores/apache-contenedores.md'
-                - VirtualHost: 'Herramientas/Servidores/apache-virtualhost.md'
-                - Logs: 'Herramientas/Servidores/apache-logs.md'
-                - 'Tipos MIME': 'Herramientas/Servidores/apache-mime.md'
-                - Autenticación: 'Herramientas/Servidores/apache-auth.md'
-            - Tomcat:
-                - Introducción: 'Herramientas/Servidores/tomcat-intro.md'
-            - FTP:
-                - 'Qué es': 'Herramientas/Servidores/ftp-intro.md'
-                - ProFTPd: 'Herramientas/Servidores/proftpd.md'
-                - Vsftpd: 'Herramientas/Servidores/vsftpd.md'
-#        - Contenedores: 
-#            - Docker: 'Herramientas/Contenedores/docker.md' 
-#            - Kubernetes: 'Herramientas/Contenedores/kubernetes.md' 
-#            - Snaps: 'Herramientas/Contenedores/snap.md' 
-#        - Editores:
-#            - Vim: 'Herramientas/Editores/vim.md'
-#            - Visual Studio Code: 'Herramientas/Editores/vscode.md'
-#            - Sublime Text: 'Herramientas/Editores/sublime-text.md'
-        - Frameworks:
-#            - Laravel: 'Herramientas/Frameworks/laravel.md'
-            - BootStrap: 'Herramientas/Frameworks/bootstrap.md'
-#        - IDEs:
-#            - Apache Netbeans: 'Herramientas/IDE/netbeans.md'
-#            - Eclipse: 'Herramientas/IDE/eclipse.md'
-#        - Otros:
-#            - Maven: 'Herramientas/Otros/maven.md'
+    - 'Guías rápidas':
+        - Laravel:
+            - Escoge tu combo: 'gr.laravel-intro.md'
+            - Breeze: 'gr.laravel-breeze.md'
+            - Mix: 'gr.laravel-mix.md'
+        - VueJS con node: 'gr.vuejs-node.md'
+    - FAQ: 
+        - Qué es una aplicación web: 'faq.apps.md'
+        - Diseccionando una web: 'faq.partes-web.md'
+        - Del servidor a tu pantalla: 'faq.servicio-web.md'
+        - Frameworks: 'faq.frameworks.md'
+        - Formularios: 'faq.formularios.md'
+        - Seguridad básica: 'faq.usuarios-contraseñas.md'
+        - Sesiones y cookies: 'faq.datos-privacidad.md'
+    - Fuentes: 'fuentes.md'
